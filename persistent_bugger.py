@@ -9,4 +9,4 @@ def persistence(num):
         num = product
         count += 1
 
-    return count
+    return count 
