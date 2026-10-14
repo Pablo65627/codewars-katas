@@ -7,4 +7,4 @@ def rot13(s):
             result += chr(((ord(char) - ord('A') + 13) % 26) + ord('A'))
         else:
             result += char 
-    return result
+    return result 
