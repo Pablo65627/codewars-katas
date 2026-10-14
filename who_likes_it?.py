@@ -8,4 +8,4 @@ def likes(names):
     elif len(names) == 3:
         return(f"{names[0]}, {names[1]} and {names[2]} like this")
     else:
-        return(f"{names[0]}, {names[1]} and {len(names)-2} others like this")
+        return(f"{names[0]}, {names[1]} and {len(names)-2} others like this") 
