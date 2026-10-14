@@ -19,4 +19,4 @@ def solution(args):
     else:
         result.extend(str(x) for x in range(start, prev + 1))
 
-    return ",".join(result)
+    return ",".join(result) 
