@@ -13,4 +13,4 @@ def increment_string(s):
     if len(incremented) < len(number):
         incremented = incremented.zfill(len(number))
 
-    return s[:match.start()] + incremented
+    return s[:match.start()] + incremented 
