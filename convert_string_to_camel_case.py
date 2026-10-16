@@ -1,9 +1,11 @@
-import re
+from functools import reduce
 
-def to_camel_case(text):
-    if not text:
-        return ""
-    
-    words = re.split(r'[-_]', text)
-    
-    return words[0] + ''.join(word.capitalize() for word in words[1:])
+
+def to_camel_case(string):
+
+    try:
+        return reduce(
+                      (lambda x, y: x[:-1] + x[-1].upper() if y in ['-', '_'] else x + y),
+                       string[::-1])[::-1]
+    except TypeError:
+        return ''
