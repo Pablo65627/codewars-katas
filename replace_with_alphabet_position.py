@@ -1,2 +1,10 @@
 def alphabet_position(text):
-    return " ".join(str(ord(char.lower()) - 96) for char in text if char.isalpha())
+
+    import string
+    
+    alphabetPositions = ""
+    for character in text.lower().replace(' ',''):
+        if character not in (string.punctuation + string.digits):
+            alphabetPositions = alphabetPositions + ' ' + str(string.ascii_lowercase.index(character) + 1)
+    
+    return alphabetPositions.strip()
