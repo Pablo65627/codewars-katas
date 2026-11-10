@@ -21,5 +21,5 @@ if __name__ == "__main__":
 
     print(remove_html_markup("<b>foo</b>")) 
     print(remove_html_markup('"<b>foo</b>"'))
-    print(remove_html_markup(<b>"foo"</b>))
+    print(remove_html_markup("<'b'>"foo"</'b'>"))
     print(remove_html_markup("<b>'foo'</b>"))
