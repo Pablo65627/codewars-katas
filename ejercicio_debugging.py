@@ -1,12 +1,15 @@
 def remove_html_markup(s):
     tag = False
+    quote = False
     out = ""
 
     for c in s:
-        if c == '<':
-            tag = True   # Start of markup
-        elif c == '>':
-            tag = False  # End of markup
+        if c == '<' and not quote:
+            tag = True   
+        elif c == '>' and not quote:  # End of markup
+            tag = False  
+        elif c == '"' or c == "'" and tag:
+            quote = not quote
         elif not tag:
             out = out + c
 
